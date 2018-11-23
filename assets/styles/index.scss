@@ -55,3 +55,24 @@ $divcolor1: rgba($background-color, 0.9);
   position: relative;
   text-align: right;
 }
+
+.btn {
+  background-color: black;
+}
+
+.emp-box {
+  border-style: dashed;
+  position: relative;
+  height: 500px;
+  width: 270px;
+}
+
+.profile-pic {
+  background-image: url('./assets/pics/profile-icon.jpg');
+  background-size: contain;
+  border-radius: 50%;
+  border-style: solid;
+  height: 100px;
+  margin-top: 30px;
+  width: 100px;
+}
