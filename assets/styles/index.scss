@@ -1,13 +1,15 @@
 @import '~bootstrap/scss/bootstrap';
 $background-color: #808080;
 $divcolor: rgba($background-color, 0.4);
+$divcolor1: rgba($background-color, 0.9);
 
 .title {
-  // background-color: $divcolor;
+  background-color: $divcolor;
   border-style: solid;
   color: white;
   float: center;
   justify-content: center;
+  position: relative;
   text-align: center;
 }
 
@@ -28,11 +30,12 @@ $divcolor: rgba($background-color, 0.4);
 }
 
 .modal-content {
-  background-color: $divcolor;
+  background-color: $divcolor1;
 }
 
-input {
+.form-control {
   background-color: $divcolor;
+  border-style: inset;
 }
 
 .launch {
@@ -42,4 +45,13 @@ input {
   padding: 10px;
   position: relative;
   text-align: center;
+}
+
+.user-controls {
+  // font-family: 'airborneregular', serif;
+  display: inline-flex;
+  justify-content: flex-end;
+  padding: 10px;
+  position: relative;
+  text-align: right;
 }
