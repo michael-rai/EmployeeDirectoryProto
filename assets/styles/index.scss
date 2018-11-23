@@ -1,1 +1,45 @@
 @import '~bootstrap/scss/bootstrap';
+$background-color: #808080;
+$divcolor: rgba($background-color, 0.4);
+
+.title {
+  // background-color: $divcolor;
+  border-style: solid;
+  color: white;
+  float: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.form-button {
+  // font-family: 'airborneregular', serif;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.modal-content {
+  background-color: $divcolor;
+}
+
+input {
+  background-color: $divcolor;
+}
+
+.launch {
+  // font-family: 'airborneregular', serif;
+  display: inline-flex;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+}
