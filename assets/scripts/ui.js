@@ -19,7 +19,8 @@ const signInSuccess = data => {
   store.user = data.user
   document.getElementById('user-controls').hidden = false
   document.getElementById('emp-box').hidden = false
-  document.getElementById('exampleModal').toggle
+  document.getElementById('launch-button').hidden = true
+  document.getElementById('database-view').hidden = false
   $('#message2').text('Signed in successful')
   $('#message2').removeClass()
   $('#message2').addClass('sucess')

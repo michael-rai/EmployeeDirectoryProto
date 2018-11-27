@@ -21,30 +21,30 @@
     </head>
     <body class="body">
       <!-- video for background below -->
-      <!-- <div class="bg">
+      <div class="bg">
         <video autoplay muted loop class="myVideo">
           <source src="public/bgvid.mp4" type="video/mp4">
         </video>
-      </div> -->
+      </div>
 
       <!--  title -->
       <div class="title">
+        <!--  USER CONTROLS-->
+          <div class="user-controls" id="user-controls" hidden>
+            <button type="button" class="btn btn-primary" data-toggle="modal"
+            data-target="#change-pw">Change Password</button>
+            <button type="button" class="btn btn-primary" id="logout">Log Out</button>
+          </div>
+
         <h1>Employee Directory</h1>
         <div class="message1" id="message1"></div>
         <div class="message2" id="message2"></div>
       </div>
 
       <!-- MODAL LAUNCH BUTTON  -->
-      <div class="launch">
+      <div class="launch" id="launch-button">
         <button type="button" class="btn btn-primary" data-toggle="modal"
       data-target="#exampleModal">Launch Portal</button>
-      </div>
-
-      <!-- USER CONTROLS -->
-      <div class="user-controls" id="user-controls" hidden>
-        <button type="button" class="btn btn-primary" data-toggle="modal"
-      data-target="#change-pw">Change Password</button>
-      <button type="button" class="btn btn-primary">Log Out</button>
       </div>
 
       <!-- PW CHANGE MODAL -->
@@ -130,7 +130,24 @@
         <aside>
           <div class="profile-pic">
         </div>
+        <div class="user-status">
+          <h4>USER IS SIGNED IN</h4>
+          <ul>
+            <li>Dept: IT</li>
+            <li>Role: Developer</li>
+            <li>Status: In-office</li>
+            <li>Phone Extention: 1257</li>
+          </ul>
+        </div>
       </aside>
+      </div>
+
+      <!-- Employee Database -->
+      <div class="database-view" id="database-view" hidden>
+        <div>
+          <div class="profile-pic">
+        </div>
+        </div>
       </div>
     </body>
 </html>

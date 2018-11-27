@@ -22,7 +22,6 @@ $divcolor1: rgba($background-color, 0.9);
 }
 
 .form-button {
-  // font-family: 'airborneregular', serif;
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -43,7 +42,7 @@ $divcolor1: rgba($background-color, 0.9);
   display: inline-flex;
   justify-content: center;
   padding: 10px;
-  position: relative;
+  position: absolute;
   text-align: center;
 }
 
@@ -61,7 +60,7 @@ $divcolor1: rgba($background-color, 0.9);
   display: inline-flex;
   justify-content: flex-end;
   padding: 10px;
-  position: relative;
+  position: absolute;
   text-align: right;
 }
 
@@ -70,8 +69,9 @@ $divcolor1: rgba($background-color, 0.9);
 }
 
 .emp-box {
+  background-color: $divcolor;
   border-style: dashed;
-  position: relative;
+  position: absolute;
   height: 500px;
   width: 270px;
 }
@@ -82,6 +82,30 @@ $divcolor1: rgba($background-color, 0.9);
   border-radius: 50%;
   border-style: solid;
   height: 100px;
+  margin: 0 auto;
+  margin-bottom: 20px;
   margin-top: 30px;
   width: 100px;
+}
+
+.user-status {
+  margin: 0 auto;
+}
+
+.user-controls {
+  float: right;
+  padding-right: 5px;
+  position: relative;
+}
+
+.database-view {
+  background-color: $divcolor;
+  border-style: inset;
+  float: center;
+  height: 100px;
+  justify-content: center;
+  padding-left: 10px;
+  position: absolute;
+  width: 100px;
+  z-index: 2;
 }
