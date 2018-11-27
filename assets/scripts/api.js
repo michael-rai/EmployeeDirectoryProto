@@ -13,9 +13,6 @@ const signIn = data => {
   return $.ajax({
     url: config.apiUrl + '/sign-in',
     method: 'POST',
-    headers: {
-      Authorization: 'Token token' + store.user.token
-    },
     data
   }
   )

@@ -21,17 +21,17 @@
     </head>
     <body class="body">
       <!-- video for background below -->
-      <div class=bg>
+      <!-- <div class="bg">
         <video autoplay muted loop class="myVideo">
           <source src="public/bgvid.mp4" type="video/mp4">
         </video>
-      </div>
+      </div> -->
 
       <!--  title -->
       <div class="title">
         <h1>Employee Directory</h1>
-        <div class="message1"></div>
-        <div class="message2"></div>
+        <div class="message1" id="message1"></div>
+        <div class="message2" id="message2"></div>
       </div>
 
       <!-- MODAL LAUNCH BUTTON  -->
@@ -41,7 +41,7 @@
       </div>
 
       <!-- USER CONTROLS -->
-      <div class="user-controls" hidden>
+      <div class="user-controls" id="user-controls" hidden>
         <button type="button" class="btn btn-primary" data-toggle="modal"
       data-target="#change-pw">Change Password</button>
       <button type="button" class="btn btn-primary">Log Out</button>
@@ -85,10 +85,8 @@
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Welcome to the Online Employee Directory</h5>
               <button type="button" id="testToggle" class="close" data-dismiss="modal"><span>&times;</span></button>
-              <h2 id="message1"></h2>
             </div>
             <div class="modal-body">
-
               <form class ="SignUp" id="SignUpFormModal"  role="form">
                 <div class="form-group">
                 <label for="usrname">Username</label>
@@ -106,7 +104,6 @@
 
             <form class ="login" id="loginFormModal" role="form">
               <div class="form-group">
-                <h2 id="message2"></h2>
               <label for="usrname">Username</label>
                 <input type="text" class="form-control" name="credentials[email]" placeholder="Enter your email">
               </div>
@@ -116,6 +113,7 @@
               </div>
             <div class="form-button">
             <button type="submit" class="btn btn-primary sign-in">Sign In</button>
+            <button type="button" class="close" data-dismiss="modal"><span>Close</span></button>
           </div>
           </form>
             </div>
@@ -128,7 +126,7 @@
       <!--MODAL ENDED  -->
 
       <!-- EMPLOYEE BOX-->
-      <div class="emp-box" hidden>
+      <div class="emp-box" id="emp-box" hidden>
         <aside>
           <div class="profile-pic">
         </div>

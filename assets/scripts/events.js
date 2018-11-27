@@ -16,8 +16,8 @@ const onSignIn = event => {
   console.log('success')
   const data = getFormFields(event.target)
   api.signIn(data)
-    .then(ui.signUpSuccess)
-    .catch(ui.signUpFailure)
+    .then(ui.signInSuccess)
+    .catch(ui.signInFailure)
 }
 
 module.exports = {
