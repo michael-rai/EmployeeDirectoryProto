@@ -30,7 +30,8 @@
       <!--  title -->
       <div class="title">
         <h1>Employee Directory</h1>
-        <div class="user-status">Status: User Logged in</div>
+        <div class="message1"></div>
+        <div class="message2"></div>
       </div>
 
       <!-- MODAL LAUNCH BUTTON  -->
@@ -40,7 +41,7 @@
       </div>
 
       <!-- USER CONTROLS -->
-      <div class="user-controls">
+      <div class="user-controls" hidden>
         <button type="button" class="btn btn-primary" data-toggle="modal"
       data-target="#change-pw">Change Password</button>
       <button type="button" class="btn btn-primary">Log Out</button>
@@ -57,7 +58,7 @@
             </div>
             <div class="modal-body">
 
-              <form class ="SignUp" id="SignUpFormModal"  role="form">
+              <form class ="SignUp" id="pwSignUpFormModal"  role="form">
                 <div class="form-group">
                 <label for="usrname">Username</label>
                   <input type="text" class="form-control" name="credentials[email]" placeholder="Enter your email">
@@ -99,7 +100,7 @@
                   <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="confirm your password">
                 </div>
               <div class="form-button">
-              <button type="submit" class="btn btn-primary signup">Register New User</button>
+              <button type="submit" class="btn btn-primary sign-up">Register New User</button>
             </div>
             </form>
 
@@ -114,7 +115,7 @@
                 <input type="password" class="form-control" name="credentials[password]" placeholder="Enter your password">
               </div>
             <div class="form-button">
-            <button type="submit" class="btn btn-primary sign in">Sign In</button>
+            <button type="submit" class="btn btn-primary sign-in">Sign In</button>
           </div>
           </form>
             </div>
@@ -127,11 +128,11 @@
       <!--MODAL ENDED  -->
 
       <!-- EMPLOYEE BOX-->
-      <div class="emp-box">
+      <div class="emp-box" hidden>
         <aside>
           <div class="profile-pic">
         </div>
-        <aside>
+      </aside>
       </div>
     </body>
 </html>

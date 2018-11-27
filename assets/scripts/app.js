@@ -4,8 +4,10 @@
 // const example = require('./example')
 
 // use require without a reference to ensure a file is bundled
-// require('./example')
+const events = require('./events.js')
 
 $(() => {
-  // your JS code goes here
+  console.log('page loaded')
+  $('#SignUpFormModal').on('submit', events.onSignUp)
+  $('#loginFormModal').on('submit', events.onSignIn)
 })

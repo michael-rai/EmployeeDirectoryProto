@@ -47,7 +47,16 @@ $divcolor1: rgba($background-color, 0.9);
   text-align: center;
 }
 
-.user-controls {
+.message1 {
+  // font-family: 'airborneregular', serif;
+  display: inline-flex;
+  justify-content: flex-end;
+  padding: 10px;
+  position: relative;
+  text-align: right;
+}
+
+.message2 {
   // font-family: 'airborneregular', serif;
   display: inline-flex;
   justify-content: flex-end;
