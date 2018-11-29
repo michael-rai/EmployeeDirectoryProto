@@ -21,6 +21,7 @@ const signInSuccess = data => {
   document.getElementById('emp-box').hidden = false
   document.getElementById('launch-button').hidden = true
   document.getElementById('database-view').hidden = false
+  document.getElementById('boxes').hidden = false
   $('#message2').text('Signed in successful')
   $('#message2').removeClass()
   $('#message2').addClass('sucess')

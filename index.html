@@ -114,12 +114,13 @@
               </div>
             <div class="form-button">
             <button type="submit" class="btn btn-primary sign-in">Sign In</button>
-            <button type="button" class="close" data-dismiss="modal"><span>Close</span></button>
           </div>
           </form>
             </div>
             <div class="modal-footer">
               <h6>version 1.0</h6>
+              <br>
+              <button type="button" class="close" data-dismiss="modal"><span>Close</span></button>
             </div>
           </div>
         </div>
@@ -127,7 +128,7 @@
       <!--MODAL ENDED  -->
 
       <!-- boxes wrapped in div  -->
-<div class='boxes'>
+<div class='boxes' id="boxes" hidden>
       <!-- EMPLOYEE BOX-->
       <div class="emp-box" id="emp-box" hidden>
         <aside>
@@ -149,6 +150,13 @@
       <div class="database-view" id="database-view" hidden>
         <div>
           <div class="profile-pic">
+            <div class="view-selector">
+              <form>
+                <input type="radio" name="view" value="Views">List All Departments
+                <input type="radio" name="gender" value="Views"> List All Employees
+                <input type="submit" value="Submit">
+              </form>
+          </div>
         </div>
         </div>
       </div>
