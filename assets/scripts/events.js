@@ -20,6 +20,15 @@ const onSignIn = event => {
     .catch(ui.signInFailure)
 }
 
+const onAddEmp = event => {
+  event.preventDefault()
+  console.log('success')
+  const data = getFormFields(event.target)
+  api.createEmp(data)
+    .then(ui.addEmpSuccess)
+    .catch(ui.addEmpFailure)
+}
+// $('').trigger('reset') reset button look into this
 const onSignOut = event => {
   event.preventDefault()
   console.log('Signed Out successfully')
@@ -32,5 +41,6 @@ const onSignOut = event => {
 module.exports = {
   onSignUp,
   onSignIn,
-  onSignOut
+  onSignOut,
+  onAddEmp
 }

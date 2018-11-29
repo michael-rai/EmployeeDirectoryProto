@@ -32,6 +32,8 @@
         <!--  USER CONTROLS-->
           <div class="user-controls" id="user-controls" hidden>
             <button type="button" class="btn btn-primary" data-toggle="modal"
+            data-target="#add-emp">Admin Controls</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal"
             data-target="#change-pw">Change Password</button>
             <button type="button" class="btn btn-primary" id="logout">Log Out</button>
           </div>
@@ -65,7 +67,7 @@
                   <input type="text" class="form-control" name="credentials[email]" placeholder="Enter your email">
                 </div>
                 <div class="form-group">
-                  <label for="psw">Password</label>
+                  <label form="psw">Password</label>
                   <input type="password" class="form-control" name="credentials[password]" placeholder="Enter your password">
                   <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="confirm your password">
                 </div>
@@ -79,6 +81,36 @@
       </div>
       <!-- CHANGE PW MODAL ENDED -->
 
+      <!-- ADD EMPLOYEE MODAL  -->
+      <div class="modal fade" id="add-emp">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" >ADMIN CONRTROLS</h5>
+              <button type="button" id="testToggle" class="close" data-dismiss="modal"><span>&times;</span></button>
+              <h2 id="message1"></h2>
+            </div>
+            <div class="modal-body">
+
+              <form class ="addEmp" id="addEmp"   role="form">
+                <div class="form-group">
+                <label form="usrname">Register an Employee</label>
+                  <input type="text" class="form-control" name="employee[name]" placeholder="Enter Employee's Name">
+                  <input type="text" class="form-control" name="employee[email]" placeholder="Enter Employee's E-mail">
+                  <input type="text" class="form-control" name="employee[dept]" placeholder="Enter Employee's Assigned Department">
+                  <input type="text" class="form-control" name="employee[company]" value="My Crazy Mind, Inc.">My Crazy Mind, Inc.
+                  <input type="radio" class="form-control" name="employee[active]" value=true >Active?
+                </div>
+              <div class="form-button">
+              <button type="submit" class="btn btn-primary signup">Add Employee</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--emp modal ends  -->
+
     <!-- MODAL BEGINS -->
       <div class="modal fade" id="exampleModal">
         <div class="modal-dialog">
@@ -90,11 +122,11 @@
             <div class="modal-body">
               <form class ="SignUp" id="SignUpFormModal"  role="form">
                 <div class="form-group">
-                <label for="usrname">Username</label>
+                <label form="usrname">Username</label>
                   <input type="text" class="form-control" name="credentials[email]" placeholder="Enter your email">
                 </div>
                 <div class="form-group">
-                  <label for="psw">Password</label>
+                  <label form="psw">Password</label>
                   <input type="password" class="form-control" name="credentials[password]" placeholder="Enter your password">
                   <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="confirm your password">
                 </div>
@@ -105,11 +137,11 @@
 
             <form class ="login" id="loginFormModal" role="form">
               <div class="form-group">
-              <label for="usrname">Username</label>
+              <label form="usrname">Username</label>
                 <input type="text" class="form-control" name="credentials[email]" placeholder="Enter your email">
               </div>
               <div class="form-group">
-                <label for="psw">Password</label>
+                <label form="psw">Password</label>
                 <input type="password" class="form-control" name="credentials[password]" placeholder="Enter your password">
               </div>
             <div class="form-button">

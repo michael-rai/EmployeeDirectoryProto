@@ -10,5 +10,6 @@ $(() => {
   console.log('page loaded')
   $('#SignUpFormModal').on('submit', events.onSignUp)
   $('#loginFormModal').on('submit', events.onSignIn)
+  $('#addEmp').on('submit', events.onAddEmp)
   $('#logout').on('click', events.onSignOut)
 })

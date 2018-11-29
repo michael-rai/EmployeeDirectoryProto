@@ -18,6 +18,15 @@ const signIn = data => {
   )
 }
 
+const createEmp = data => {
+  return $.ajax({
+    url: config.apiUrl + '/employees',
+    method: 'POST',
+    data
+  }
+  )
+}
+
 const signOut = data => {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
@@ -32,5 +41,6 @@ const signOut = data => {
 module.exports = {
   signUp,
   signIn,
-  signOut
+  signOut,
+  createEmp
 }

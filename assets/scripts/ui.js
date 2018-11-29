@@ -8,6 +8,21 @@ const signUpSuccess = data => {
   console.log('signUpSuccess ran. data is : ', data)
 }
 
+const addEmpSuccess = data => {
+  $('#message1').text('Registered Employee')
+  $('#message1').removeClass()
+  $('#message1').addClass('sucess')
+  // unhide game board, purge, and scorekeepers
+  console.log('addEmpSuccess ran. data is : ', data)
+}
+
+const addEmpFailure = data => {
+  $('#message1').text('Could Not Register Employee')
+  $('#message1').removeClass()
+  $('#message1').addClass('sucess')
+  console.error('addEmpFailure ran. Error is: ', data)
+}
+
 const signUpFailure = data => {
   $('#message1').text('Sign up unsucessful')
   $('#message1').removeClass()
@@ -39,5 +54,7 @@ module.exports = {
   signUpFailure,
   signUpSuccess,
   signInSuccess,
-  signInFailure
+  signInFailure,
+  addEmpFailure,
+  addEmpSuccess
 }
