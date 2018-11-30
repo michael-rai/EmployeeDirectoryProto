@@ -9,17 +9,17 @@ const signUpSuccess = data => {
 }
 
 const addEmpSuccess = data => {
-  $('#message1').text('Registered Employee')
-  $('#message1').removeClass()
-  $('#message1').addClass('sucess')
+  $('#message4').text('Registered Employee')
+  $('#message4').removeClass()
+  $('#message4').addClass('sucess')
   // unhide game board, purge, and scorekeepers
   console.log('addEmpSuccess ran. data is : ', data)
 }
 
 const addEmpFailure = data => {
-  $('#message1').text('Could Not Register Employee')
-  $('#message1').removeClass()
-  $('#message1').addClass('sucess')
+  $('#message3').text('COULD NOT REGISTER EMPLOYEE!')
+  $('#message3').removeClass()
+  $('#message3').addClass('FAILURE')
   console.error('addEmpFailure ran. Error is: ', data)
 }
 
@@ -37,10 +37,9 @@ const signInSuccess = data => {
   document.getElementById('launch-button').hidden = true
   document.getElementById('database-view').hidden = false
   document.getElementById('boxes').hidden = false
-  $('#message2').text('Signed in successful')
+  $('#message2').text('Signed in successfully')
   $('#message2').removeClass()
   $('#message2').addClass('sucess')
-  // unhide game board, purge, and scorekeepers
   console.log('signInSuccess ran. data is : ', data)
 }
 

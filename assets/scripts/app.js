@@ -8,8 +8,12 @@ const events = require('./events.js')
 
 $(() => {
   console.log('page loaded')
+  // logins
   $('#SignUpFormModal').on('submit', events.onSignUp)
   $('#loginFormModal').on('submit', events.onSignIn)
+  // user controls
   $('#addEmp').on('submit', events.onAddEmp)
+  //
+  $('#changeview').on('submit', events.onChangeView)
   $('#logout').on('click', events.onSignOut)
 })

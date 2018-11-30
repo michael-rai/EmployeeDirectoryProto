@@ -86,25 +86,39 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" >ADMIN CONRTROLS</h5>
+              <h5 class="modal-title" >ADMIN CONTROLS</h5>
               <button type="button" id="testToggle" class="close" data-dismiss="modal"><span>&times;</span></button>
-              <h2 id="message1"></h2>
+
             </div>
             <div class="modal-body">
 
               <form class ="addEmp" id="addEmp"   role="form">
                 <div class="form-group">
-                <label form="usrname">Register an Employee</label>
+                <label form="register">Register an Employee</label>
                   <input type="text" class="form-control" name="employee[name]" placeholder="Enter Employee's Name">
                   <input type="text" class="form-control" name="employee[email]" placeholder="Enter Employee's E-mail">
                   <input type="text" class="form-control" name="employee[dept]" placeholder="Enter Employee's Assigned Department">
                   <input type="text" class="form-control" name="employee[company]" value="My Crazy Mind, Inc.">My Crazy Mind, Inc.
                   <input type="radio" class="form-control" name="employee[active]" value=true >Active?
                 </div>
+                <div class="message3" id="message3"></div>
+                <div class="message2" id="message4"></div>
               <div class="form-button">
               <button type="submit" class="btn btn-primary signup">Add Employee</button>
             </div>
             </form>
+
+            <form class ="delEmp" id="delEmp"   role="form">
+              <div class="form-group">
+              <label form="delete">Delete</label>
+                <input type="text" class="form-control" name="employee[name]" placeholder="Enter Employee's Name">
+
+              </div>
+            <div class="form-button">
+            <button type="submit" class="btn btn-primary signup">Delete Employee</button>
+          </div>
+          </form>
+
             </div>
           </div>
         </div>
@@ -183,10 +197,10 @@
         <div>
           <div class="profile-pic">
             <div class="view-selector">
-              <form>
-                <input type="radio" name="view" value="Views">List All Departments
-                <input type="radio" name="gender" value="Views"> List All Employees
-                <input type="submit" value="Submit">
+              <form role="form" id="changeview">
+                <input type="radio" name="view-dept" value="departments">List All Departments
+                <input type="radio" name="view-emp" value="employees"> List All Employees
+                <input type="submit">
               </form>
           </div>
         </div>

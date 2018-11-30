@@ -27,6 +27,7 @@ const onAddEmp = event => {
   api.createEmp(data)
     .then(ui.addEmpSuccess)
     .catch(ui.addEmpFailure)
+  $('#addEmp').trigger('reset')
 }
 // $('').trigger('reset') reset button look into this
 const onSignOut = event => {
@@ -38,9 +39,19 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
+const onChangeView = event => {
+  event.preventDefault()
+  console.log('Either Employee view or Department view was selected')
+  // const data = getFormFields(event.target)
+  // api.signOut(data)
+  //   .then(ui.signOutSuccess)
+  //   .catch(ui.signOutFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
-  onAddEmp
+  onAddEmp,
+  onChangeView
 }
