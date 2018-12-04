@@ -63,7 +63,21 @@ const signInFailure = data => {
   console.error('signInFailure ran. Error is: ', data)
 }
 
-const showEmps = data => {}
+const showEmpsSuccess = data => {
+  data.employees.forEach(function (employee) {
+    const empTemp = `<ul>
+      <li>Name: ${employee.name}</li>
+      <li>Email: ${employee.email}</li>
+      <li>Department: ${employee.dept}</li>
+      <li>Active?: ${employee.active}</li>
+    </ul>`
+    $('#data-view').append(empTemp)
+  })
+}
+
+const showEmpsFailure = data => {
+  $('#data-view').text('this did not work..now fix this function to display data!')
+}
 
 const signOutFailure = data => {
   $('#message2').text('Signout Failed! ')
@@ -80,5 +94,6 @@ module.exports = {
   signOutFailure,
   addEmpFailure,
   addEmpSuccess,
-  showEmps
+  showEmpsSuccess,
+  showEmpsFailure
 }

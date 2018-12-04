@@ -52,9 +52,9 @@ const onChangeView = event => {
 
 const onShowAllEmps = event => {
   event.preventDefault()
-  api.showEmps
-    .then()
-    .catch()
+  api.showEmps()
+    .then(ui.showEmpsSuccess)
+    .catch(ui.showEmpFailure)
 }
 
 module.exports = {
