@@ -197,11 +197,15 @@
         <div>
           <div class="profile-pic">
             <div class="view-selector">
-              <form role="form" id="changeview">
-                <input type="radio" name="view-dept" value="departments">List All Departments
-                <input type="radio" name="view-emp" value="employees"> List All Employees
-                <input type="submit">
-              </form>
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-mdb-color form-check-label" active>
+                  <input class="form-check-input" type="checkbox" autocomplete="off"> All Departments
+                </label>
+                <label class="btn btn-mdb-color form-check-label">
+                  <input class="form-check-input" type="checkbox" autocomplete="off"> All Employees
+                </label>
+              </div>
+
           </div>
         </div>
         </div>
