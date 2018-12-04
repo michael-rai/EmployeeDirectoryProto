@@ -48,10 +48,20 @@ const onChangeView = event => {
   //   .catch(ui.signOutFailure)
 }
 
+// PAGE events
+
+const onShowAllEmps = event => {
+  event.preventDefault()
+  api.showEmps
+    .then()
+    .catch()
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
   onAddEmp,
-  onChangeView
+  onChangeView,
+  onShowAllEmps
 }

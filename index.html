@@ -47,7 +47,7 @@
       <!-- MODAL LAUNCH BUTTON  -->
       <div class="launch" id="launch-button">
         <button type="button" class="btn btn-primary" data-toggle="modal"
-      data-target="#exampleModal">Launch Portal</button>
+      data-target="#mainModal">Launch Portal</button>
       </div>
 
       <!-- PW CHANGE MODAL -->
@@ -126,7 +126,7 @@
       <!--emp modal ends  -->
 
     <!-- MODAL BEGINS -->
-      <div class="modal fade" id="exampleModal">
+      <div class="modal fade" id="mainModal">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -193,17 +193,20 @@
       </div>
 
       <!-- Employee Database -->
-      <div class="database-view" id="database-view" hidden>
+      <div class="database-view" id="database-view">
         <div>
           <div class="profile-pic">
             <div class="view-selector">
               <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-mdb-color form-check-label" active>
-                  <input class="form-check-input" type="checkbox" autocomplete="off"> All Departments
+                  <input class="form-check-input" type="checkbox" autocomplete="off" id='all-dept-views'> All Departments
                 </label>
-                <label class="btn btn-mdb-color form-check-label">
+                <label class="btn btn-mdb-color form-check-label" id="all-emp-views">
                   <input class="form-check-input" type="checkbox" autocomplete="off"> All Employees
                 </label>
+                <div class="data-view" id="data-view">
+                  <p> TEST DATA </p>
+                </div>
               </div>
 
           </div>

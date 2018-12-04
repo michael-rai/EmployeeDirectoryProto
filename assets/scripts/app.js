@@ -13,7 +13,8 @@ $(() => {
   $('#loginFormModal').on('submit', events.onSignIn)
   // user controls
   $('#addEmp').on('submit', events.onAddEmp)
-  //
+  // page views
   $('#changeview').on('submit', events.onChangeView)
   $('#logout').on('click', events.onSignOut)
+  $('#all-emp-views').on('click', events.onShowAllEmps)
 })

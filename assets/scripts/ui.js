@@ -1,10 +1,10 @@
 const store = require('./store.js')
 
 const signUpSuccess = data => {
+  $('#SignUpFormModal')[0].reset()
   $('#message1').text('Signed up successfully')
   $('#message1').removeClass()
   $('#message1').addClass('sucess')
-  // unhide game board, purge, and scorekeepers
   console.log('signUpSuccess ran. data is : ', data)
 }
 
@@ -12,7 +12,6 @@ const addEmpSuccess = data => {
   $('#message4').text('Registered Employee')
   $('#message4').removeClass()
   $('#message4').addClass('sucess')
-  // unhide game board, purge, and scorekeepers
   console.log('addEmpSuccess ran. data is : ', data)
 }
 
@@ -37,10 +36,24 @@ const signInSuccess = data => {
   document.getElementById('launch-button').hidden = true
   document.getElementById('database-view').hidden = false
   document.getElementById('boxes').hidden = false
+  $('#loginFormModal')[0].reset()
+  $('#mainModal').modal('toggle')
   $('#message2').text('Signed in successfully')
   $('#message2').removeClass()
   $('#message2').addClass('sucess')
   console.log('signInSuccess ran. data is : ', data)
+}
+
+const signOutSuccess = data => {
+  document.getElementById('user-controls').hidden = true
+  document.getElementById('emp-box').hidden = true
+  document.getElementById('launch-button').hidden = false
+  document.getElementById('database-view').hidden = true
+  document.getElementById('boxes').hidden = true
+  $('#message2').text('You have successfully logged out')
+  $('#message2').removeClass()
+  $('#message2').addClass('sucess')
+  console.log('signOutSuccess ran. data is : ', data)
 }
 
 const signInFailure = data => {
@@ -49,11 +62,23 @@ const signInFailure = data => {
   $('#message2').addClass('sucess')
   console.error('signInFailure ran. Error is: ', data)
 }
+
+const showEmps = data => {}
+
+const signOutFailure = data => {
+  $('#message2').text('Signout Failed! ')
+  $('#message2').removeClass()
+  $('#message2').addClass('sucess')
+  console.error('signOutFailure ran. Error is: ', data)
+}
 module.exports = {
   signUpFailure,
   signUpSuccess,
   signInSuccess,
   signInFailure,
+  signOutSuccess,
+  signOutFailure,
   addEmpFailure,
-  addEmpSuccess
+  addEmpSuccess,
+  showEmps
 }

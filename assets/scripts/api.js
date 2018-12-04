@@ -27,12 +27,21 @@ const createEmp = data => {
   )
 }
 
+const showEmps = data => {
+  return $.ajax({
+    url: config.apiUrl + '/employees',
+    method: 'GET',
+    data
+  }
+  )
+}
+
 const signOut = data => {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
     headers: {
-      Authorization: 'Token token' + store.user.token
+      Authorization: 'Token token=' + store.user.token
     }
   }
   )
@@ -42,5 +51,6 @@ module.exports = {
   signUp,
   signIn,
   signOut,
-  createEmp
+  createEmp,
+  showEmps
 }
