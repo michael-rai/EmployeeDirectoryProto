@@ -52,6 +52,7 @@ const onChangeView = event => {
 
 const onShowAllEmps = event => {
   event.preventDefault()
+  // if this button has been pressed before stopped from executing twice
   api.showEmps()
     .then(ui.showEmpsSuccess)
     .catch(ui.showEmpFailure)
