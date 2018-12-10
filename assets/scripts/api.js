@@ -35,20 +35,29 @@ const showEmps = data => {
   }
   )
 }
-
-const delEmps = data => {
-  return $.ajax({
-    url: config.apiUrl + `/employees/${data}`,
-    method: 'DELETE',
-    data
-  }
-  )
-}
-
+// const delEmps = data => {
+//   return $.ajax({
+//     url: config.apiUrl + `/employees/${data}`,
+//     method: 'DELETE',
+//     data
+//   }
+//   )
+// }
 const changePw = data => {
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
+    data,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const delEmp = data => {
+  return $.ajax({
+    url: config.apiUrl + '/employees',
+    method: 'DELETE',
     data,
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -73,6 +82,6 @@ module.exports = {
   signOut,
   createEmp,
   showEmps,
-  delEmps,
+  delEmp,
   changePw
 }

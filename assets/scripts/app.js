@@ -14,6 +14,7 @@ $(() => {
   // user controls
   $('#addEmp').on('submit', events.onAddEmp)
   $('#change-pw').on('submit', events.onChangePw)
+  $('#delEmp').on('submit', events.onDelEmp)
   // page views
   $('#changeview').on('submit', events.onChangeView)
   $('#logout').on('click', events.onSignOut)

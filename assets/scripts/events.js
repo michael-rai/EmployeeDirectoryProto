@@ -12,7 +12,6 @@ const onSignUp = event => {
 
 const onSignIn = event => {
   event.preventDefault()
-  console.log('success')
   const data = getFormFields(event.target)
   api.signIn(data)
     .then(ui.signInSuccess)
@@ -21,7 +20,6 @@ const onSignIn = event => {
 
 const onAddEmp = event => {
   event.preventDefault()
-  console.log('success')
   const data = getFormFields(event.target)
   api.createEmp(data)
     .then(ui.addEmpSuccess)
@@ -31,7 +29,6 @@ const onAddEmp = event => {
 // $('').trigger('reset') reset button look into this
 const onSignOut = event => {
   event.preventDefault()
-  console.log('Signed Out successfully')
   const data = getFormFields(event.target)
   api.signOut(data)
     .then(ui.signOutSuccess)
@@ -40,21 +37,20 @@ const onSignOut = event => {
 
 const onChangePw = event => {
   event.preventDefault()
-  console.log('attempting to change pw')
   const data = getFormFields(event.target)
   api.changePw(data)
     .then(ui.pwChangeSuccess)
     .catch(ui.pwChangeFailure)
   $('#change-pw').trigger('reset')
 }
-const onChangeView = event => {
-  event.preventDefault()
-  console.log('Either Employee view or Department view was selected')
-  // const data = getFormFields(event.target)
-  // api.signOut(data)
-  //   .then(ui.signOutSuccess)
-  //   .catch(ui.signOutFailure)
-}
+// const onChangeView = event => {
+//   event.preventDefault()
+//   console.log('Either Employee view or Department view was selected')
+//   // const data = getFormFields(event.target)
+//   // api.signOut(data)
+//   //   .then(ui.signOutSuccess)
+//   //   .catch(ui.signOutFailure)
+// }
 
 // PAGE events
 
@@ -64,6 +60,13 @@ const onShowAllEmps = event => {
   api.showEmps()
     .then(ui.showEmpsSuccess)
     .catch(ui.showEmpFailure)
+}
+
+const onDelEmp = event => {
+  event.preventDefault()
+  api.delEmp()
+    .then(ui.delEmpSuccess)
+    .catch(ui.delEmpFailure)
 }
 
 // const onShowAllDepts = event => {
@@ -80,8 +83,9 @@ module.exports = {
   onSignIn,
   onSignOut,
   onAddEmp,
-  onChangeView,
+  // onChangeView,
   onShowAllEmps,
-  onChangePw
+  onChangePw,
+  onDelEmp
   // onShowAllDepts
 }

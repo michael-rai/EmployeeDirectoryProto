@@ -19,6 +19,21 @@ const addEmpFailure = data => {
   $('#message3').addClass('FAILURE')
 }
 
+const delEmpFailure = data => {
+  $('#message3').text('COULD NOT DELETE EMPLOYEE!')
+  $('#message3').removeClass()
+  $('#message3').addClass('FAILURE')
+}
+
+const delEmpSuccess = data => {
+  // check value from getFormFields
+  // find in employee array matching text
+  // delete and prompt
+  $('#message3').text('Employee has been deleted from Director. HR will continue to keep record of Employee on Database.')
+  $('#message3').removeClass()
+  $('#message3').addClass('FAILURE')
+}
+
 const pwChangeFailure = data => {
   $('#message3').text('COULD NOT CHANGE USER PASSWORD!')
   $('#message3').removeClass()
@@ -101,5 +116,7 @@ module.exports = {
   showEmpsSuccess,
   showEmpsFailure,
   pwChangeFailure,
-  pwChangeSuccess
+  pwChangeSuccess,
+  delEmpSuccess,
+  delEmpFailure
 }
