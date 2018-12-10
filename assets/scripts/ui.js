@@ -63,7 +63,7 @@ const signOutSuccess = data => {
 }
 
 const signInFailure = data => {
-  $('#message2').text('Sign in unsucessful')
+  $('#reg-failure').text('SIGN-IN UNSUCESSFUL!')
   $('#message2').removeClass()
   $('#message2').addClass('sucess')
 }

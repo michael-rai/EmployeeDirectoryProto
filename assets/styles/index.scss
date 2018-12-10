@@ -6,6 +6,14 @@ $background-color: #808080;
 $divcolor: rgba($background-color, 0.4);
 $divcolor1: rgba($background-color, 0.9);
 
+.reg-sucess {
+  color: blue;
+}
+
+.reg-failure {
+  color: red;
+}
+
 .marquee {
   font-size: 14px;
   float: right;
