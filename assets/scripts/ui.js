@@ -22,6 +22,20 @@ const addEmpFailure = data => {
   console.error('addEmpFailure ran. Error is: ', data)
 }
 
+const pwChangeFailure = data => {
+  $('#message3').text('COULD NOT CHANGE USER PASSWORD!')
+  $('#message3').removeClass()
+  $('#message3').addClass('FAILURE')
+  console.error('pwChangeFailure ran. Error is: ', data)
+}
+
+const pwChangeSuccess = data => {
+  $('#message3').text('USER PASSWORD HAS BEEN CHANGED!')
+  $('#message3').removeClass()
+  $('#message3').addClass('SUCESS')
+  console.error('pwChangeSuccess ran. Error is: ', data)
+}
+
 const signUpFailure = data => {
   $('#message1').text('Sign up unsucessful')
   $('#message1').removeClass()
@@ -95,5 +109,7 @@ module.exports = {
   addEmpFailure,
   addEmpSuccess,
   showEmpsSuccess,
-  showEmpsFailure
+  showEmpsFailure,
+  pwChangeFailure,
+  pwChangeSuccess
 }

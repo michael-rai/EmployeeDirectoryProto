@@ -39,7 +39,7 @@
           </div>
           <br>
 
-        <h1>Employee Directory</h1>
+        <h1>x-Direct</h1>
         <div class="message1" id="message1"></div>
         <div class="message2" id="message2"></div>
       </div>
@@ -65,6 +65,7 @@
                 <div class="form-group">
                 <label for="usrname">Username</label>
                   <input type="text" class="form-control" name="credentials[email]" placeholder="Enter your email">
+                  <input type="text" class="form-control" name="credentials[password]" placeholder="Enter your email">
                 </div>
                 <div class="form-group">
                   <i class="fas fa-key"></i> <label form="psw">Password</label>
@@ -99,7 +100,10 @@
                   <input type="text" class="form-control" name="employee[email]" placeholder="Enter Employee's E-mail">
                   <input type="text" class="form-control" name="employee[dept]" placeholder="Enter Employee's Assigned Department">
                   <input type="text" class="form-control" name="employee[company]" value="My Crazy Mind, Inc.">My Crazy Mind, Inc.
-                  <input type="radio" class="form-control" name="employee[active]" value=true >Active?
+                  <input type="radio" id="active" name="switch_2" value='true' checked/>
+                  <label for="active">Active</label>
+                  <input type="radio" id="inactive" name="switch_2" value='false' />
+                  <label for="inactive">Inactive</label>
                 </div>
                 <div class="message3" id="message3"></div>
                 <div class="message2" id="message4"></div>
@@ -188,6 +192,9 @@
             <li>Status: In-office</li>
             <li>Phone Extention: 1257</li>
           </ul>
+          <div class='marquee-containter'>
+            <marquee class='marquee' behavior="scroll" direction="left">Company Meeting on Friday at 9 AM. Please verify IT has updated your FOB. Please congratulate Margaret on her retirement--her last day is the 30th</marquee>
+          </div>
         </div>
       </aside>
       </div>

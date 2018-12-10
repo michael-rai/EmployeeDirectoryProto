@@ -39,6 +39,15 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
+const onChangePw = event => {
+  event.preventDefault()
+  console.log('attempting to change pw')
+  const data = getFormFields(event.target)
+  api.changePw(data)
+    .then(ui.pwChangeSuccess)
+    .catch(ui.pwChangeFailure)
+  $('#change-pw').trigger('reset')
+}
 const onChangeView = event => {
   event.preventDefault()
   console.log('Either Employee view or Department view was selected')
@@ -58,11 +67,22 @@ const onShowAllEmps = event => {
     .catch(ui.showEmpFailure)
 }
 
+// const onShowAllDepts = event => {
+//   event.preventDefault()
+//   // if this button has been pressed before stopped from executing twice
+//   const deptView = <ul>Departments
+//   <li>Security</li>
+//   </ul>
+//   $('#data-view').append(deptView)
+// }
+
 module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
   onAddEmp,
   onChangeView,
-  onShowAllEmps
+  onShowAllEmps,
+  onChangePw
+  // onShowAllDepts
 }

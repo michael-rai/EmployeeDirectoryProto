@@ -1,13 +1,55 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 $background-color: #808080;
 $divcolor: rgba($background-color, 0.4);
 $divcolor1: rgba($background-color, 0.9);
+
+.marquee {
+  font-size: 14px;
+  float: right;
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  // margin: 0;
+  line-height: 50px;
+  text-align: center;
+
+  // Starting position
+
+  -moz-transform: translateX(800px);
+  -webkit-transform: translateX(800px);
+  transform: translateX(2px);
+
+  // /* Apply animation to this element */
+  -moz-animation: example1 15s linear infinite;
+  -webkit-animation: example1 15s linear infinite;
+  animation: example1 15s linear infinite;
+  z-index: 2;
+}
+// Move it (define the animation)
+@-moz-keyframes marquee {
+  0% { -moz-transform: translateX(800px); }
+  100% { -moz-transform: translateX(-800px); }
+}
+
+@-webkit-keyframes marquee {
+  0% { -webkit-transform: translateX(100%); }
+  100% { -webkit-transform: translateX(-100%); }
+}
+
+.marquee-containter {
+  align-items: flex-end;
+}
 
 .title {
   background-color: $divcolor;
   border-style: solid;
   color: white;
   float: center;
+  font-family: 'Permanent Marker', cursive;
   justify-content: center;
   position: relative;
   text-align: center;

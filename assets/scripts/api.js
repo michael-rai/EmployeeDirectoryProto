@@ -36,6 +36,26 @@ const showEmps = data => {
   )
 }
 
+const delEmps = data => {
+  return $.ajax({
+    url: config.apiUrl + `/employees/${data}`,
+    method: 'DELETE',
+    data
+  }
+  )
+}
+
+const changePw = data => {
+  return $.ajax({
+    url: config.apiUrl + '/change-password',
+    method: 'PATCH',
+    data,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 const signOut = data => {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
@@ -52,5 +72,7 @@ module.exports = {
   signIn,
   signOut,
   createEmp,
-  showEmps
+  showEmps,
+  delEmps,
+  changePw
 }
