@@ -2,45 +2,39 @@ const store = require('./store.js')
 
 const signUpSuccess = data => {
   $('#SignUpFormModal')[0].reset()
-  $('#message1').text('Signed up successfully')
+  $('#reg-sucess').text('Signed up successfully. You may now sign-in below.')
   $('#message1').removeClass()
   $('#message1').addClass('sucess')
-  console.log('signUpSuccess ran. data is : ', data)
 }
 
 const addEmpSuccess = data => {
   $('#message4').text('Registered Employee')
   $('#message4').removeClass()
   $('#message4').addClass('sucess')
-  console.log('addEmpSuccess ran. data is : ', data)
 }
 
 const addEmpFailure = data => {
   $('#message3').text('COULD NOT REGISTER EMPLOYEE!')
   $('#message3').removeClass()
   $('#message3').addClass('FAILURE')
-  console.error('addEmpFailure ran. Error is: ', data)
 }
 
 const pwChangeFailure = data => {
   $('#message3').text('COULD NOT CHANGE USER PASSWORD!')
   $('#message3').removeClass()
   $('#message3').addClass('FAILURE')
-  console.error('pwChangeFailure ran. Error is: ', data)
 }
 
 const pwChangeSuccess = data => {
   $('#message3').text('USER PASSWORD HAS BEEN CHANGED!')
   $('#message3').removeClass()
   $('#message3').addClass('SUCESS')
-  console.error('pwChangeSuccess ran. Error is: ', data)
 }
 
 const signUpFailure = data => {
-  $('#message1').text('Sign up unsucessful')
+  $('#reg-sucess').text('You are unable to register. Please contact Administrator.')
   $('#message1').removeClass()
-  $('#message1').addClass('sucess')
-  console.error('signUpFailure ran. Error is: ', data)
+  $('#message1').addClass('failure')
 }
 
 const signInSuccess = data => {
@@ -55,7 +49,6 @@ const signInSuccess = data => {
   $('#message2').text('Signed in successfully')
   $('#message2').removeClass()
   $('#message2').addClass('sucess')
-  console.log('signInSuccess ran. data is : ', data)
 }
 
 const signOutSuccess = data => {
@@ -67,14 +60,12 @@ const signOutSuccess = data => {
   $('#message2').text('You have successfully logged out')
   $('#message2').removeClass()
   $('#message2').addClass('sucess')
-  console.log('signOutSuccess ran. data is : ', data)
 }
 
 const signInFailure = data => {
   $('#message2').text('Sign in unsucessful')
   $('#message2').removeClass()
   $('#message2').addClass('sucess')
-  console.error('signInFailure ran. Error is: ', data)
 }
 
 const showEmpsSuccess = data => {
@@ -97,7 +88,6 @@ const signOutFailure = data => {
   $('#message2').text('Signout Failed! ')
   $('#message2').removeClass()
   $('#message2').addClass('sucess')
-  console.error('signOutFailure ran. Error is: ', data)
 }
 module.exports = {
   signUpFailure,
