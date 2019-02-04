@@ -1,7 +1,7 @@
 const store = require('./store.js')
 
 const signUpSuccess = data => {
-  $('#SignUpFormModal')[0].reset()
+  $('#signUpFormModal')[0].reset()
   $('#reg-sucess').text('Signed up successfully. You may now sign-in below.')
   $('#message1').removeClass()
   $('#message1').addClass('sucess')

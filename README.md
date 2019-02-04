@@ -1,15 +1,27 @@
+![Imgur](https://i.imgur.com/B4blkWL.png)
+
 This is a the second half of a full stacked project. The front-end client
-facing single page web app entitled. x-Direct.
+facing single page web app entitled. x-Direct. x-Direct is an internal employee directory that lists all employees within a company.
 
-Locations:
 
-Production:https://xdirect.herokuapp.com/
-GitHub Repo: https://github.com/michael-rai/EmployeeDirectoryServer
+--LIVE URL:
+https://michael-rai.github.io/EmployeeDirectoryProto/
 
-x-Direct is an internal employee directory that lists all employees within a company.
-Employee entries are a featured of an ERD. The (one) commpany to (many) employees.
+--BACK END REPOSITORY:
+The following is a link to the back-end repository
+https://github.com/michael-rai/EmployeeDirectoryServer
 
-Preproduction
+--TECHNOLOGIES USED:
+HTML, CSS, BOOTSTRAP and JavaScript.
 
-In the planing stages, I wireframmed the intial look of the client page.
-imagur: 
+
+--FUTURE ITERATIONS:
+I will use handlebars to generate cards with employee info.
+
+
+--DOCUMENT PLANNING:
+  Wireframe: https://imgur.com/MFlRcUX
+  User Stories:
+  -User should be able to sign in, change password and sign-out.
+  -User should be able to generate a list of all employees in a company.
+  
